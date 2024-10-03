@@ -18,7 +18,7 @@ $ docker compose up
 ```
 
 
-### Lightweight Container with Cloud Native Buildpacks
+### Building Windows Executable
 If you are doing this on local Windows machine for testing purpose
 
 ```
