@@ -1,0 +1,13 @@
+name: tng
+
+version: '1.0'
+
+services:
+  demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+    ports:
+      - "8080:8080"
