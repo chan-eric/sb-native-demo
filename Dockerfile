@@ -11,8 +11,8 @@ COPY . /build
 RUN ./mvnw --no-transfer-progress native:compile -Pnative
 
 # The deployment Image
-# Create a smaller runtime image
-FROM ubuntu:22.04
+# Create a smaller runtime image, the runtime is targetted toward the following OS, you can specify OS, ie "FROM ubuntu:22.04"
+FROM container-registry.oracle.com/os/oraclelinux:8-slim
 
 # Copy the native image from the builder stage into the containers
 COPY --from=builder /build/target/demo /app/
